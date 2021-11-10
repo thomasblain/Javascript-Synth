@@ -1,4 +1,9 @@
+#synth {
+  padding: 1rem;
+}
+
 #title {
+  padding-left: 1rem;
   color: red;
 }
 
@@ -11,22 +16,32 @@
   height: 2rem;
 }
 
+#hzContainer {
+  padding-top: 0.25rem;
+  width: 100%;
+  text-align: center;
+}
+
 #minVal {
   float: left;
+}
+
+#currentVal {
+
 }
 
 #maxVal {
   float: right;
 }
 
-#currentVal {
-  float: left;
+#patternSelect {
+  padding-top: 1rem;
 }
 
 .slideContainer{
-  width: 30rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  width: 30rem;
 }
 
 .slider{
