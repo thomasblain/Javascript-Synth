@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
 <script src="../scripts/synth.js"></script>
-<link rel="stylesheet" href="../css/synth.css">
+<link rel="stylesheet" href="../style/synth.css">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <body onload="startup()">
     <h1 id="title"></h1>
-    <button id="playSound"></button>
+    <button id="playSound" onclick="playSound()">
+      <div>Play Synth</div>
+    </button>
+    <button id="stopSound" onclick="stopSound()">
+      <div>Stop</div>
+    </button>
+    <div class="slideContainer">
+      <input type="range" min="0" max="1000" value="440" class="slider"
+             id="frequencySlider" oninput="updateTone()">
+      <div id="minVal"></div>
+      <div id="currentVal"></div>
+      <div id="maxVal"></div>
+    </div>
   </body>
 </html>
