@@ -16,32 +16,40 @@
   height: 2rem;
 }
 
-#hzContainer {
-  padding-top: 0.25rem;
-  width: 100%;
-  text-align: center;
+#patternSelect {
+  padding-bottom: 0.25rem;
 }
 
-#minVal {
-  float: left;
+#multiSlideContainer {
+  width: 30rem;
 }
 
-#currentVal {
-
-}
-
-#maxVal {
+#gainSlideContainer {
   float: right;
 }
 
-#patternSelect {
-  padding-top: 1rem;
+#panSlideContainer {
+  float: left;
+}
+
+.minVal {
+  float: left;
+}
+
+.maxVal {
+  float: right;
 }
 
 .slideContainer{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   width: 30rem;
+}
+
+.smallSlideContainer {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 9rem;
 }
 
 .slider{
@@ -71,5 +79,9 @@
 .slider::-moz-range-thumb{
   width: 25px;
   height: 25px;
+  cursor: pointer;
+}
+
+.button:hover {
   cursor: pointer;
 }

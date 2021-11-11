@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<script src="../scripts/synth.js"></script>
 <link rel="stylesheet" href="../style/synth.css">
 <head>
   <meta charset="UTF-8">
@@ -9,21 +8,8 @@
   <body onload="startup()">
     <h1 id="title"></h1>
     <div id="synth">
-      <button id="playSound" onclick="playSound()">
-        <div>Play Synth</div>
-      </button>
-      <button id="stopSound" onclick="stopSound()">
-        <div>Stop</div>
-      </button>
-      <div class="slideContainer">
-        <input type="range" min="0" max="3000" value="440" class="slider"
-               id="frequencySlider" oninput="updateTone()">
-        <div id="currentVal"></div>
-        <div id="hzContainer">
-          <div id="minVal"></div>
-          <div id="maxVal"></div>
-        </div>
-      </div>
+      <script src="../scripts/synth.js"></script>
+
       <div id="patternSelect">
         <label for="pattern">Pattern</label>
         <select name="pattern" id="pattern" onchange="changePattern()">
@@ -33,6 +19,39 @@
           <option value="triangle">Triangle</option>
         </select>
       </div>
+
+      <button class="button" id="playSound" onclick="playSound()">
+        <div>Play Synth</div>
+      </button>
+      <button class="button" id="stopSound" onclick="stopSound()">
+        <div>Stop</div>
+      </button>
+
+      <div class="slideContainer">
+        <div>Frequency</div>
+        <div class="minVal" id="minHzVal"></div><div class="maxVal" id="maxHzVal"></div>
+        <input type="range" min="0" max="3000" value="440" class="slider"
+               id="frequencySlider" oninput="updateTone()">
+        <div id="currentHzVal"></div>
+      </div>
+
+      <div id="multiSlideContainer">
+        <div class="smallSlideContainer" id="panSlideContainer">
+          <div>Pan</div>
+          <div class="minVal" id="minPanVal"></div><div class="maxVal" id="maxPanVal"></div>
+          <input type="range" min="-1" max="1" value="0" step="0.1" class="slider"
+                 id="panSlider" oninput="updatePanner()">
+          <div id="currentPanVal"></div>
+        </div>
+
+        <div class="smallSlideContainer" id="gainSlideContainer">
+          <div>Gain</div>
+          <div class="minVal" id="minGainVal"></div><div class="maxVal" id="maxGainVal"></div>
+          <input type="range" min="0" max="100" value="50" step="0.5" class="slider"
+                 id="gainSlider" oninput="updateGain()">
+          <div id="currentGainVal"></div>
+        </div>
+    </div>
     </div>
   </body>
 </html>
